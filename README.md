@@ -28,5 +28,15 @@ The data consists of approximately 50,000 quaternary alloys at atmospheric press
 
 \* There are several possible phases that can arise from the combination of elements present in the dataset. They have names such as AL3M_D022, ALCR2, BCC_B2, LAVES_C15, etc. The naming conventions can be pretty weird, and can change depending on constituent elements. For the purposes of this exervise, as long as none of the the phases are LIQUID then the alloy is considered stable. 
 
+# NN Design
+The quaternary alloys can be formed from any four elements from the following: 'AL', 'FE', 'MN', 'NB', 'NI', 'TA', 'V', 'MO', 'CR', 'TI'
+
+Possible phases that can arise are: 'LIQUID', 'AL3M_D022', 'AL2TI', 'ALTI', 'ALM_D019', 'HCP_A3', 'AL11CR2', 'BCC_B2', 'AL9CR4_L', 'AL8CR5_L', 'ALCR2', 'AL4CR', 'CUB_A15', 'AL4MO', 'AL8MO3', 'FCC_A1', 'LAVES_C15', 'LAVES_C14', 'FETI', 'AL2FE', 'AL5FE2', 'AL13FE4', 'AL5MO', 'CR3SI_A15', 'SIGMA', 'CUB_A13', 'CBCC_A12', 'CR3MN5', 'AL8MN5_D810', 'AL11MN4', 'AL4MN', 'CRSI2', 'AL6MN', 'ALPHA_TIMN', 'AL3TA2_L', 'NI2V', 'NI3V', 'NI2V7', 'AL13CR2'
+
+The neural network takes in a binarized label that encodes the amount of each element present, and then each output node is a binary classifier that predicts the presence of the 39 possible output phases.
+
+
+
+
 
 If you see this, thanks Sam for putting the data together!
